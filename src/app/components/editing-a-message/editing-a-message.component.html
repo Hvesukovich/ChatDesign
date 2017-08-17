@@ -1,0 +1,7 @@
+<div class="message-box message-box-right">
+    <textarea id="message_text" class="message-text" [(ngModel)]="message" ng-keypress=""></textarea>
+</div>
+<div class="btn-send-block">
+    <i class="fa fa-share-square-o fa-2x btn-send" aria-hidden="true" (click)="sendMessage(message)"></i>
+    <button md-raised-button>Raised button</button>
+</div>

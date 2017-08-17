@@ -1,0 +1,30 @@
+<div *ngFor="let message of this.messagesService.messages">
+
+    <div *ngIf="message.sent" [ngClass]="(message.name !='Я')?'message-box-left':'message-box-right'" class="message-box">
+        <p class="message-text">{{message.message}}</p>
+        <span class="message-date">{{message.date}}</span>
+    </div>
+
+    <div *ngIf="!message.sent" [ngClass]="(message.name !='Я')?'message-box-left':'message-box-right'" class="message-box send">
+        <p class="message-text">{{message.message}}</p>
+        <span class="message-date">{{message.date}}</span>
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw spinner-send"></i>
+    </div>
+
+
+</div>
+
+<!--НАБЛОНЫ-->
+<!--<div class="message-box message-box-left">-->
+    <!--<p class="message-text">Привет, как дела? Что делаешь?</p>-->
+    <!--<span class="message-date">16/08/2017 16:44</span>-->
+<!--</div>-->
+<!--<div class="message-box message-box-right">-->
+    <!--<p class="message-text">Привет, всё хорошо. Сижу пишу чат.</p>-->
+    <!--<span class="message-date">16/08/2017 16:45</span>-->
+<!--</div>-->
+<!--<div class="message-box message-box-right send">-->
+    <!--<p class="message-text">Привет, всё хорошо.</p>-->
+    <!--<span class="message-date">16/08/2017 16:45</span>-->
+    <!--<i class="fa fa-spinner fa-pulse fa-3x fa-fw spinner-send"></i>-->
+<!--</div>-->
