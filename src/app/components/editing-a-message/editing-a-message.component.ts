@@ -10,14 +10,7 @@ import {$} from "protractor/built/index";
     styleUrls: ['./editing-a-message.component.css']
 })
 export class EditingAMessageComponent implements OnInit {
-    private id:string;
-    private name:string;
-    private login:string;
-    private message:string;
-    private date:string;
-    private spinner = false;
-    private textarea = document.getElementById("message_text");
-
+    private message = "";
 
     constructor(private messagesService: MessagesService) {
     }
@@ -26,20 +19,13 @@ export class EditingAMessageComponent implements OnInit {
     }
 
     private sendMessage(message:string){
-        this.spinner = true;
-        this.message = "";
-        const obj = this.messagesService.addMessage(message);
-        setTimeout( () => {
-            obj.sent = 1;
-        }, 2000);
+        if(message.trim()){
+            const obj = this.messagesService.addMessage(message);
+            setTimeout( () => {
+                obj.sent = 1;
+            }, 2000);
+            this.message = "";
+        }
     }
-    // private onNameChange($event){
-    //         alert($event);
-    // }
-
-    onEnter(){
-        alert('работает');
-    }
-    
 
 }

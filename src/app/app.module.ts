@@ -10,6 +10,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {HttpModule} from "@angular/http";
 import {MessagesService} from "./services/messages.service";
 import {FormsModule} from "@angular/forms";
+import {MaterialModule} from "@angular/material";
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import {FormsModule} from "@angular/forms";
         EditingAMessageComponent
     ],
     imports: [
-        BrowserAnimationsModule,
+        // BrowserAnimationsModule,
+        MaterialModule,
         FormsModule,
         BrowserModule,
         AppRoutingModule,

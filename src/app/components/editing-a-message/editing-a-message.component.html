@@ -1,7 +1,8 @@
 <div class="message-box message-box-right">
-    <textarea id="message_text" class="message-text" [(ngModel)]="message" ng-keypress=""></textarea>
+    <!--<textarea id="message_text" class="message-text" [(ngModel)]="message"></textarea>-->
+    <textarea mdInput placeholder="Message" class="message-text" [(ngModel)]="message" (keyup.enter)="sendMessage(message)"></textarea>
 </div>
 <div class="btn-send-block">
-    <i class="fa fa-share-square-o fa-2x btn-send" aria-hidden="true" (click)="sendMessage(message)"></i>
-    <button md-raised-button>Raised button</button>
+    <button md-mini-fab class="btn-send" (click)="sendMessage(message)"><md-icon>check</md-icon></button>
+    <!--<button md-raised-button><i class="fa fa-share-square-o fa-2x btn-send" aria-hidden="true" (click)="sendMessage(message)"></i></button>-->
 </div>

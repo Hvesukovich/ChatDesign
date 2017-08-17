@@ -1,7 +1,27 @@
+.message-body{
+    display: flex;
+    flex-direction: row;
+}
+.foto{
+    border: 2px solid silver;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    margin: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 47px;
+    min-width: 47px;
+    max-width: 47px;
+}
+
 .message-box{
+    flex-grow: 3;
+    flex-shrink: 1;
     margin: 5px;
     padding: 5px 10px;
     position: relative;
+    overflow: hidden;
 }
 .message-box-left{
     border: 3px solid silver;
@@ -30,6 +50,7 @@
 .spinner-send{
     position: absolute;
     top: 5%;
-    left: 40%;
+    left: 35%;
     color: black;
+    height: 40px;
 }
