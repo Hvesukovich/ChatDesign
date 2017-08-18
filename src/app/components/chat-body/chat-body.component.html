@@ -1,4 +1,4 @@
-<div *ngFor="let message of this.messagesService.messages">
+<div *ngFor="let message of messagesService.messages">
     <div class="message-body"
          [ngClass]="{
          'message-box-left':(message.sender !=='me'),

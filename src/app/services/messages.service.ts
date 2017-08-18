@@ -5,7 +5,7 @@ import {Http} from "@angular/http";
 export class MessagesService {
     public messages;
 
-    constructor(private http:Http) {
+    constructor(private http: Http) {
     }
 
     public messageGet() {
@@ -18,11 +18,11 @@ export class MessagesService {
         });
     }
 
-    public  addMessage(message){
+    public  addMessage(message) {
         let date = new Date().toLocaleDateString();
-        date += " "  + new Date().toLocaleTimeString();
-        let obj = {
-            "id": '1',
+        date += ' ' + new Date().toLocaleTimeString();
+        const obj = {
+            id: '1',
             "name": "I",
             "login": "Login",
             "message": message,
