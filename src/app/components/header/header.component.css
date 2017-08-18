@@ -4,7 +4,6 @@
     flex-basis: 5%;
     background-color: #c83429;
     display: flex;
-    /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
 }
@@ -26,39 +25,3 @@
     flex-basis: 5%;
     background-color: #3245c8;
 }
-
-/*.block{*/
-    /*background-color: #00c853;*/
-    /*height: 50px;*/
-    /*padding: 5px;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-/*}*/
-/*.backward{*/
-    /*cursor: pointer;*/
-    /*float: left;*/
-/*}*/
-/*.foto-block{*/
-    /*padding-left: 10px;*/
-    /*float: left;*/
-/*}*/
-/*.foto{*/
-    /*border: 2px silver solid;*/
-    /*border-radius: 50%;*/
-    /*height: 40px;*/
-    /*width: 40px;*/
-/*}*/
-/*.phrases{*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*align-items: stretch;*/
-    /*margin-left: 5px;*/
-/*}*/
-/*.caption{*/
-    /*font-size: 18px;*/
-    /*font-weight: bold;*/
-/*}*/
-/*.phrase{*/
-    /*font-size: 13px;*/
-/*}*/

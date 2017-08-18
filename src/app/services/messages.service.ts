@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Response, Headers, URLSearchParams} from "@angular/http";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Http} from "@angular/http";
 
 @Injectable()
 export class MessagesService {
@@ -20,30 +19,18 @@ export class MessagesService {
     }
 
     public  addMessage(message){
-        // let  date = new Date();
         let date = new Date().toLocaleDateString();
         date += " "  + new Date().toLocaleTimeString();
-        // let date = new Date();
-        // let year = date.getUTCFullYear();
-        // let letMonth = date.getUTCMonth();
-        // let letMonth = date.getUTCMonth();
-        // let day = date.getUTCDate();
-        // let hour = date.getHours();
-        // let hour = date.getUTCHours();
-        // let minutes = date.getUTCMinutes();
-        // let seconds = date.getUTCSeconds();
         let obj = {
             "id": '1',
-            "name": "Я",
-            "login": "LoginЯ",
+            "name": "I",
+            "login": "Login",
             "message": message,
-            // "date": day + "/" + letMonth + "/" + year + " " + hour + ":" + minutes
             "date": date,
-            "sent": 0
-            // "date": Date()
+            "sent": 0,
+            "sender": "me"
         };
         this.messages.push(obj);
-        
         return obj;
     }
 
