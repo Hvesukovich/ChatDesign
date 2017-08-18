@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http} from "@angular/http";
+import {Http} from '@angular/http';
 
 @Injectable()
 export class MessagesService {
@@ -23,12 +23,12 @@ export class MessagesService {
         date += ' ' + new Date().toLocaleTimeString();
         const obj = {
             id: '1',
-            "name": "I",
-            "login": "Login",
-            "message": message,
-            "date": date,
-            "sent": 0,
-            "sender": "me"
+            name: 'I',
+            login: 'Login',
+            message: message,
+            date: date,
+            sent: 0,
+            sender: 'me'
         };
         this.messages.push(obj);
         return obj;
