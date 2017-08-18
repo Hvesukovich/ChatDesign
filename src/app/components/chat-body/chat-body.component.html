@@ -1,33 +1,34 @@
 <div *ngFor="let message of this.messagesService.messages">
 
-    <div *ngIf="message.sent" class="message-body">
-        <div *ngIf="message.name !='Я'" class="foto">
-            <img src="">
+    <div class="message-body"
+         [ngClass]="{
+         'message-box-left':(message.name !='Я'),
+          'message-box-right': (message.name =='Я'),
+           'send':(!message.sent)
+           }">
+        <div class="foto">
+            <img src="assets/avatars/1.png">
         </div>
-        <div [ngClass]="(message.name !='Я')?'message-box-left':'message-box-right'"
-             class="message-box">
-            <p class="message-text">{{message.message}}</p>
-            <span class="message-date">{{message.date}}</span>
-        </div>
-        <div *ngIf="message.name =='Я'" class="foto">
-            <img src="">
-        </div>
-    </div>
-
-    <div *ngIf="!message.sent" class="message-body">
-        <div *ngIf="message.name !='Я'" class="foto">
-            <img src="">
-        </div>
-        <div [ngClass]="(message.name !='Я')?'message-box-left':'message-box-right'"
-             class="message-box send">
+        <div class="message-box">
             <p class="message-text">{{message.message}}</p>
             <span class="message-date">{{message.date}}</span>
             <md-spinner class="spinner-send"></md-spinner>
         </div>
-        <div *ngIf="message.name =='Я'" class="foto">
-            <img src="">
-        </div>
     </div>
+
+    <!--<div *ngIf="!message.sent" class="message-body" [ngClass]="(message.name !='Я')?'message-box-left':'message-box-right'">-->
+        <!--<div *ngIf="message.name !='Я'" class="foto">-->
+            <!--<img src="assets/avatars/1.png">-->
+        <!--</div>-->
+        <!--<div class="message-box send">-->
+            <!--<p class="message-text">{{message.message}}</p>-->
+            <!--<span class="message-date">{{message.date}}</span>-->
+            <!--<md-spinner class="spinner-send"></md-spinner>-->
+        <!--</div>-->
+        <!--<div *ngIf="message.name =='Я'" class="foto">-->
+            <!--<img src="assets/avatars/3.png">-->
+        <!--</div>-->
+    <!--</div>-->
 
     <!--<div *ngIf="!message.sent" class="message-body">-->
         <!--<div class="foto">-->
