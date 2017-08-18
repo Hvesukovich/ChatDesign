@@ -8,7 +8,7 @@ import {MessagesService} from '../../services/messages.service';
 })
 export class ChatBodyComponent implements OnInit {
 
-  constructor(private messagesService: MessagesService) { }
+  constructor(public messagesService: MessagesService) { }
 
   ngOnInit() {
   }

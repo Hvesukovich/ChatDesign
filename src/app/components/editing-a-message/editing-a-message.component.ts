@@ -1,8 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MdButtonModule} from '@angular/material';
-import {FormsModule} from "@angular/forms";
-import {MessagesService} from "../../services/messages.service";
-import {$} from "protractor/built/index";
+import {MessagesService} from '../../services/messages.service';
 
 @Component({
     selector: 'app-editing-a-message',
@@ -18,7 +15,7 @@ export class EditingAMessageComponent implements OnInit {
     ngOnInit() {
     }
 
-    private sendMessage(message:string){
+    public sendMessage(message:string){
         if(message.trim()){
             const obj = this.messagesService.addMessage(message);
             setTimeout( () => {

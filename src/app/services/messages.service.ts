@@ -10,9 +10,7 @@ export class MessagesService {
 
     public messageGet() {
         this.http.get('http://localhost:4200/assets/messages.json').subscribe((data) => {
-            const messages = data.json().messages;
-            this.messages = messages;
-            console.log(messages);
+            this.messages = data.json().messages;
         }, error => {
             console.log(error);
         });
